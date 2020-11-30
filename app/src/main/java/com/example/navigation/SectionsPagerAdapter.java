@@ -1,4 +1,4 @@
-package com.example.navigation.ui.main;
+package com.example.navigation;
 
 import android.content.Context;
 
@@ -8,7 +8,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.navigation.R;
+import com.example.navigation.ui.main.FavoriteFragment;
+import com.example.navigation.ui.main.PlayingFragment;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
@@ -37,10 +38,10 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                 break;
         }
         return  fragment;
+
     }
 
-
-                @Nullable
+    @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
         return mContext.getResources().getString(TAB_TITLES[position]);
